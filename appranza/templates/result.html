@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro Realizado</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            height: 50%;
+            margin: 0 auto;
+            font-size: 70%;
+            margin-bottom: -30%;
+            
+        }
+
+        .button {
+            background-color: goldenrod;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro Realizado</h1>
+        <p>Nome de usuário: {{ username }}</p>
+        <p>Senha: {{ password }}</p>
+        <p>Nome: {{ name }}</p>
+        <p>Telefone: {{ phone }}</p>
+        <p>CPF: {{ cpf }}</p>
+        <p>Altura: {{ height }} cm</p>
+        <p>Peso: {{ weight }} kg</p>
+        <button class="button" onclick="entrarNoApp()">Entrar no app</button>
+
+        <script>
+            function entrarNoApp() {
+                document.body.style.opacity = 0;
+                setTimeout(function() {
+                    window.location.href = "/choose_goal";
+                }, 300);
+            }
+        </script>
+    </div>
+</body>
+</html>
+
+

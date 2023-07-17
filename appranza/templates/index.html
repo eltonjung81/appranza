@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            position: relative; /* Adicione essa linha */
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -300px;
+            right: 0;
+            bottom: 0;
+            background-image: url("imagens/pngindex.png");
+            background-repeat: no-repeat;
+            background-size: 50%; /* Altere aqui para diminuir a imagem pela metade */
+            background-size: auto 100%; /* A imagem ocupa 100% da altura e mantém a largura original */
+   
+            z-index: -1;
+            opacity: 0.13;
+        }
+
+
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 50%;
+            height: 1.5%;
+        }
+
+        .button {
+            background-color: goldenrod;
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            font-size: 28px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .phrase {
+            margin-top: 20px;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <!-- Coloque sua logomarca aqui -->
+        <img src="imagens/caminho_para_logo.png" alt="Logo">
+    </div>
+
+    <div class="button-container">
+        <button class="button">Login</button>
+        <button class="button" onclick="redirectToCadastro()">Quero me cadastrar</button>
+        <script>
+            function redirectToCadastro() {
+                window.location.href ="/cadastro";  // Redireciona para a rota '/'
+            }
+
+            
+        </script>
+
+    </div>
+
+    <p class="phrase">Lembre-se de que cada mordida conta<br>Faça escolhas inteligentes <br> corpo saudável e  mente feliz.</p>
+</body>
+</html>
